@@ -43,6 +43,7 @@ clusterGroup:
   projects:
     - hub
     - servicemesh
+    - keycloak
 
   # Explicitly mention the cluster-state based overrides we plan to use for this pattern.
   # We can use self-referential variables because the chart calls the tpl function with these variables defined
@@ -89,6 +90,12 @@ clusterGroup:
       namespace: golang-external-secrets
       project: hub
       path: common/golang-external-secrets
+
+    jaeger:
+      name: jaeger
+      namespace: openshift-distributed-tracing
+      project: servicemesh
+      path: charts/all/servicemesh/
 
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
