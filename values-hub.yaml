@@ -6,6 +6,8 @@ clusterGroup:
     - open-cluster-management
     - vault
     - golang-external-secrets
+    - openshift-distributed-tracing
+    - openshift-operators-redhat
 
   subscriptions:
     acm:
@@ -14,8 +16,24 @@ clusterGroup:
       channel: release-2.9
       #csv: advanced-cluster-management.v2.6.1
 
+    jaeger:
+      name: jaeger-product
+      namespace: openshift-distributed-tracing
+      #channel: release-2.9
+
+    kiali:
+      name: kiali-ossm
+      namespace: openshift-operators
+      #channel: release-2.9
+
+    elastic:
+      name: elasticsearch-operator
+      namespace: openshift-operators-redhat
+      #channel: release-2.9
+
   projects:
     - hub
+    - servicemesh
 
   # Explicitly mention the cluster-state based overrides we plan to use for this pattern.
   # We can use self-referential variables because the chart calls the tpl function with these variables defined
