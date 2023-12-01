@@ -8,6 +8,10 @@ clusterGroup:
     - golang-external-secrets
     - openshift-distributed-tracing
     - openshift-operators-redhat
+    - rhsso
+
+  operatorgroupExcludes:
+    - openshift-distributed-tracing
 
   subscriptions:
     acm:
@@ -29,6 +33,11 @@ clusterGroup:
     elastic:
       name: elasticsearch-operator
       namespace: openshift-operators-redhat
+      #channel: release-2.9
+
+    keycloak:
+      name: rhsso
+      namespace: rhsso
       #channel: release-2.9
 
   projects:
