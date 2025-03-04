@@ -6,13 +6,14 @@ clusterGroup:
     - open-cluster-management
     - vault
     - golang-external-secrets
-    - openshift-operators-redhat:
-        operatorGroup: true
-        targetNamespaces:
-    - openshift-distributed-tracing:
-        operatorGroup: true
-        targetNamespaces:
+    - istio-cni
     - istio-system
+    #- openshift-operators-redhat:
+    #    operatorGroup: true
+    #    targetNamespaces:
+    #- openshift-distributed-tracing:
+    #    operatorGroup: true
+    #    targetNamespaces:
     - travel-agency
     - travel-portal
     - travel-control
@@ -23,22 +24,22 @@ clusterGroup:
       namespace: open-cluster-management
       channel: release-2.12
 
-    elasticsearch:
-      name: elasticsearch-operator
-      namespace: openshift-operators-redhat
+    #elasticsearch:
+    #  name: elasticsearch-operator
+    #  namespace: openshift-operators-redhat
+    #
+    #jaeger:
+    #  name: jaeger-product
+    #  namespace: openshift-distributed-tracing
     
-    jaeger:
-      name: jaeger-product
-      namespace: openshift-distributed-tracing
-    
-    kiali:
-      name: kiali-ossm
-      namespace: openshift-operators
-      channel: stable
-    
-    servicemesh:
-      name: servicemeshoperator
-      namespace: openshift-operators
+    #kiali:
+    #  name: kiali-ossm
+    #  namespace: openshift-operators
+    #  channel: stable
+    #
+    #servicemesh:
+    #  name: servicemeshoperator
+    #  namespace: openshift-operators
   
   projects:
     - hub
@@ -100,11 +101,11 @@ clusterGroup:
       project: travelops
       path: charts/all/travelops/mysqldb
 
-    servicemesh:
-      name: servicemesh-controlplane
-      namespace: istio-system
-      project: servicemesh
-      path: charts/all/servicemesh
+    #servicemesh:
+    #  name: servicemesh-controlplane
+    #  namespace: istio-system
+    #  project: servicemesh
+    #  path: charts/all/servicemesh
 
     agency: 
       name: travel-agency
