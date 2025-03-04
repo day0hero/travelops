@@ -95,11 +95,11 @@ clusterGroup:
       chart: golang-external-secrets
       chartVersion: 0.1.*
 
-    mysql:
-      name: mysqldb
-      namespace: travel-agency
-      project: travelops
-      path: charts/all/travelops/mysqldb
+    #mysql:
+    #  name: mysqldb
+    #  namespace: travel-agency
+    #  project: travelops
+    #  path: charts/all/travelops/mysqldb
 
     #servicemesh:
     #  name: servicemesh-controlplane
@@ -107,23 +107,23 @@ clusterGroup:
     #  project: servicemesh
     #  path: charts/all/servicemesh
 
-    agency: 
-      name: travel-agency
-      namespace: travel-agency
-      project: travelops
-      path: charts/all/travelops/travel-agency
-    
-    portal:
-      name: travel-portal
-      namespace: travel-portal
-      project: travelops
-      path: charts/all/travelops/travel-portal
-    
-    control:
-      name: travel-control
-      namespace: travel-control
-      project: travelops
-      path: charts/all/travelops/travel-control
+    #agency: 
+    #  name: travel-agency
+    #  namespace: travel-agency
+    #  project: travelops
+    #  path: charts/all/travelops/travel-agency
+    #
+    #portal:
+    #  name: travel-portal
+    #  namespace: travel-portal
+    #  project: travelops
+    #  path: charts/all/travelops/travel-portal
+    #
+    #control:
+    #  name: travel-control
+    #  namespace: travel-control
+    #  project: travelops
+    #  path: charts/all/travelops/travel-control
 
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm

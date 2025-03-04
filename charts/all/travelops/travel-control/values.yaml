@@ -8,6 +8,9 @@ global:
   jaeger:
     strategy: production
 
+#Disable Service Mesh Resource Deployment
+meshEnabled: false
+
 # Enable automatic sidecar injection
 sidecarAutoInjection: true
 
