@@ -18,11 +18,11 @@ clusterGroup:
       namespace: open-cluster-management
       channel: release-2.12
 
-    #kiali:
-    #  name: kiali-ossm
-    #  namespace: openshift-operators
-    #  channel: stable
-    #
+    kiali:
+      name: kiali-ossm
+      namespace: openshift-operators
+      channel: stable
+    
     servicemesh:
       name: servicemeshoperator3
       namespace: openshift-operators
