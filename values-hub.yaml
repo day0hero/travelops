@@ -7,7 +7,9 @@ clusterGroup:
     - vault
     - golang-external-secrets
     - istio-cni
-    - istio-system 
+    - istio-system
+    - openshift-tempo-operator
+    - openshift-opentelemetry-operator
     - travel-agency
     - travel-portal
     - travel-control
@@ -27,6 +29,14 @@ clusterGroup:
       name: servicemeshoperator3
       namespace: openshift-operators
       channel: candidates
+
+    tempo:
+      name: tempo-product
+      namespace: openshift-tempo-operator
+    
+    open-telemetry:
+      name: opentelemetry-product
+      namespace: openshift-telemetry-operator
   
   projects:
     - hub
