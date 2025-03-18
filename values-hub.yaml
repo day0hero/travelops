@@ -86,13 +86,13 @@ clusterGroup:
       name: istio-cni
       namespace: istio-cni
       project: servicemesh
-      path: charts/all/servicemesh3
+      path: charts/all/servicemesh3/istio-cni
   
     istio:
       name: istio
       namespace: istio-system
       project: servicemesh
-      path: charts/all/servicemesh3
+      path: charts/all/servicemesh3/istio
   
     #mysql:
     #  name: mysqldb
