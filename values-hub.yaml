@@ -7,13 +7,7 @@ clusterGroup:
     - vault
     - golang-external-secrets
     - istio-cni
-    - istio-system
-    #- openshift-operators-redhat:
-    #    operatorGroup: true
-    #    targetNamespaces:
-    #- openshift-distributed-tracing:
-    #    operatorGroup: true
-    #    targetNamespaces:
+    - istio-system 
     - travel-agency
     - travel-portal
     - travel-control
@@ -24,22 +18,15 @@ clusterGroup:
       namespace: open-cluster-management
       channel: release-2.12
 
-    #elasticsearch:
-    #  name: elasticsearch-operator
-    #  namespace: openshift-operators-redhat
-    #
-    #jaeger:
-    #  name: jaeger-product
-    #  namespace: openshift-distributed-tracing
-    
     #kiali:
     #  name: kiali-ossm
     #  namespace: openshift-operators
     #  channel: stable
     #
-    #servicemesh:
-    #  name: servicemeshoperator
-    #  namespace: openshift-operators
+    servicemesh:
+      name: servicemeshoperator3
+      namespace: openshift-operators
+      channel: candidates
   
   projects:
     - hub
@@ -94,7 +81,19 @@ clusterGroup:
       project: hub
       chart: golang-external-secrets
       chartVersion: 0.1.*
-
+#ServiceMesh 3 Configuration
+    istio-cni:
+      name: istio-cni
+      namespace: istio-cni
+      project: servicemesh
+      path: charts/all/servicemesh3
+  
+    istio:
+      name: istio
+      namespace: istio-system
+      project: servicemesh
+      path: charts/all/servicemesh3
+  
     #mysql:
     #  name: mysqldb
     #  namespace: travel-agency
