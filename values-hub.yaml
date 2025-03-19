@@ -8,7 +8,9 @@ clusterGroup:
     - golang-external-secrets
     - istio-cni
     - istio-system
-    - openshift-tempo-operator
+    - openshift-tempo-operator:
+        targetNamespaces:
+          - ""
     - openshift-opentelemetry-operator
     - travel-agency
     - travel-portal
