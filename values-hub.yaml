@@ -10,12 +10,10 @@ clusterGroup:
     - istio-system
     - openshift-tempo-operator:
         operatorGroup: true
-        targetNamespaces:
-          - ""
+        targetNamespaces: ""
     - openshift-opentelemetry-operator:
         operatorGroup: true
-        targetNamespaces:
-          - ""
+        targetNamespaces: ""
     - travel-agency
     - travel-portal
     - travel-control
