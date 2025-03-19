@@ -9,9 +9,11 @@ clusterGroup:
     - istio-cni
     - istio-system
     - openshift-tempo-operator:
+        operatorGroup: true
         targetNamespaces:
           - ""
     - openshift-opentelemetry-operator:
+        operatorGroup: true
         targetNamespaces:
           - ""
     - travel-agency
