@@ -9,9 +9,6 @@ clusterGroup:
     - openshift-operators-redhat:
         operatorGroup: true
         targetNamespaces:
-    - openshift-distributed-tracing:
-        operatorGroup: true
-        targetNamespaces:
     - istio-system
     - travel-agency
     - travel-portal
@@ -23,13 +20,13 @@ clusterGroup:
       namespace: open-cluster-management
       channel: release-2.14
 
-    elasticsearch:
-      name: elasticsearch-operator
-      namespace: openshift-operators-redhat
-    
-    jaeger:
-      name: jaeger-product
-      namespace: openshift-distributed-tracing
+#    elasticsearch:
+#      name: elasticsearch-operator
+#      namespace: openshift-operators-redhat
+#    
+#    jaeger:
+#      name: jaeger-product
+#      namespace: openshift-distributed-tracing
     
     kiali:
       name: kiali-ossm
