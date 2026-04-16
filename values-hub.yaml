@@ -43,6 +43,9 @@ clusterGroup:
   subscriptions:
     servicemesh:
       name: servicemeshoperator3
+      channel: stable-3.2
+      csv: servicemeshoperator3.v3.2.3
+      installPlanApproval: Manual
     servicemesh-console:
       name: kiali-ossm
     distributed-tracing:
@@ -100,6 +103,9 @@ clusterGroup:
       project: servicemesh
       chart: servicemesh
       chartVersion: 0.1.*
+      overrides:
+        - name: servicemesh.version
+          value: v1.24.3
     temposttack:
       name: tempostack
       namespace: tempo
