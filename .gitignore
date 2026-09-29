@@ -1,4 +1,5 @@
 *~
+tests/ci/.results/
 *.swp
 *.swo
 values-secret*
